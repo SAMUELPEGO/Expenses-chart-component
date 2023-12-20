@@ -1,0 +1,129 @@
+:root {
+--Softred: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+--Darkbrown: hsl(25, 47%, 15%);
+--Mediumbrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Verypaleorange: hsl(33, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'DM Sans', sans-serif;
+  
+}
+body {
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+}
+.main {
+    width: 355px;
+    margin: 20px;
+    min-height: 100px;
+}
+header {
+    width: 100%;
+    padding: 20px;
+    background: var(--Softred);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    position: relative;
+}
+header span {
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+header::before {
+    content: url("./images/logo.svg");
+    position: absolute;
+    left: 270px;
+}
+section {
+    background-color: hsl(33, 100%, 98%);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+section * {
+    width: 100%;
+}
+h2 { 
+    font-size: 22px;
+    font-weight: 900;
+    color: hsl(25, 47%, 15%);
+}
+.container_bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: center;
+    margin: 40px 0 10px 0;
+    font-size: 12px;
+}
+.container_bars div {
+    width: 30px;  
+    height: 50px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 3px;   
+}
+.container_bars span {
+    position: relative;
+    top: -35px;
+    padding: 5px;
+    background-color: hsl(25, 47%, 15%);
+    color: white;
+    border-radius: 5px;
+    /* display: none; */  
+}
+.div_month {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.div_month * {
+    text-align: center;
+    width: 30px;
+    font-size: 12px;
+}
+.container_stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_stats * {
+    width: max-content;
+}
+.container_stats p {
+    font-size: 12px;
+    color: hsl(0, 0%, 60%)
+}
+.container_stats span {
+    color: hsl(25, 47%, 15%);
+    font-size: 30px;
+    font-weight: 900;
+}
+.container_stats >:nth-child(2) span {
+    font-size: 15px;
+    position: relative;
+    left: 49px;
+}
+
+@media only screen and (min-width: 650px) {
+    .container_bars div,
+    .div_month p
+     {
+       width: 40px;
+    }
+    .main {
+        width: 400px;
+    }
+}
+
+
